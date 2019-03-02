@@ -19,7 +19,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ##host = socket.gethostname()
 host = "127.0.0.1"
 
-port = 9999     
+port = 10000    
 
 print("Socket created")
 
@@ -57,8 +57,7 @@ while True:
         print(data)
     
     
-    # lock released on exit 
-    #   print_lock.release() 
+     
     
     
     # send back reversed string to client 
@@ -66,8 +65,9 @@ while True:
         currentTime = time.ctime(time.time()) + "\r\n"
         client.send(currentTime.encode('ascii'))
         continue
-        
+     #lock released on exit 
+    print_lock.release()    
    
         
 # connection closed, but when loop will end 
-client.close() 
+client.close()
