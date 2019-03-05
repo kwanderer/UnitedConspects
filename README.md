@@ -1,6 +1,8 @@
 # UnitedConspects
  
+Welcome to our project *UnitedConspects*!
 
+We are going to create a database for students for the exchange of educational materials.
 
 ### Our team "Dead inside":
 
@@ -12,16 +14,6 @@
 
 *Valērija Radzeniece* - main tester, design developer
 
-.............................................................................................
-
-We are going to create a database for students.
-
-Model:
-
-Client < = > Server < = > Data base
-
-Student < = > conspects
-
-
+................................................................................................................................................................................
 
 For more information visit our [wiki](https://github.com/krisypon/UnitedConspects/wiki)!
