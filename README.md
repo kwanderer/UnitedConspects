@@ -16,4 +16,4 @@ We are going to create a database for students for the exchange of educational m
 
 ................................................................................................................................................................................
 
-For more information visit our [wiki](https://github.com/krisypon/UnitedConspects/wiki)!
+**For more information visit our [wiki](https://github.com/krisypon/UnitedConspects/wiki)!**
