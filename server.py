@@ -1,73 +1,43 @@
-#!/usr/bin/env python3
-
-# server.py 
-import socket                                         
-import time
-import ftplib
-import urllib
-
-# import thread module 
+#!/usr/bin/python3
+import socket
+import threading
 from _thread import *
-import threading 
-print_lock = threading.Lock() 
-
-# create a socket object
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-
-# get local machine name
-# local host IP '127.0.0.1' 
-##host = socket.gethostname()
-host = "127.0.0.1"
-
-port = 10000    
-
-print("Socket created")
-
-# bind to the port
-s.bind((host, port))                                  
-
-print("Socket binded to post", port) 
-
-# queue up to 5 requests
-s.listen(5)
-
-print("Socket is listening")
-
-
+print_lock = threading.Lock()
+ 
+ssFT = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+ssFT.bind((socket.gethostname(), 10000))
+ssFT.listen(5)
 
 while True:
-    # establish a connection with client
-    client,addr = s.accept()   
+    (conn, address) = ssFT.accept()
+    #pdf_file = 'my.txt'#'myld.pdf'    
+ 
+    #Receive file name
+    #data received from client
+    name = conn.recv(1024) 
+    #print("Hurray message")
+    if not name: 
+        #print('Bye')
+        break
+    print(name)
     
-   
+            
+    #SendFile
+#n=name+".pdf"
+    with open(name, 'rb') as fs:
+        conn.send(b'BEGIN')
+        while True:
+            data = fs.read(1024)
+            #print('Sending data')
+            conn.send(data)
+            #print('Sent data')
+            if not data:
+                #print('Breaking from sending data')
+                break
+        conn.send(b'ENDED')
+        fs.close()
+
+    continue
     
-    # lock acquired by client 
-    print_lock.acquire()
-    
-    print("Got a connection from %s" % str(addr))
-    
-    while True:
-    
-    # data received from client 
-        data = client.recv(1024) 
-        print("Hurray message")
-        if not data: 
-            print('Bye')
-            break
-        print(data)
-    
-    
-     
-    
-    
-    # send back reversed string to client 
-    #client.send(data) 
-        currentTime = time.ctime(time.time()) + "\r\n"
-        client.send(currentTime.encode('ascii'))
-        continue
-     #lock released on exit 
-    print_lock.release()    
-   
-        
-# connection closed, but when loop will end 
-client.close()
+    #break
+conn.close()
