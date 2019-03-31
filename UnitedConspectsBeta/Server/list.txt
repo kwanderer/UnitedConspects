@@ -1,0 +1,11 @@
+Chose a file from our list:
+
+1.kurss
+MatLab:
+    ML1.pdf
+
+2.kurss
+Fizika:
+    Elektromagnetisms.pdf
+Pusvaditaju ierices:
+    1LDdiodes.pdf
