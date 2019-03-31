@@ -35,7 +35,7 @@ Usually this libraries are included by default.
 You can download Python 3.7 [here](https://www.python.org/downloads/)
 
 ### Get started
-Download folder UnitedConspects.
+Download folder UnitedConspectsBeta.
 
    Running server and client from one machine.
     
