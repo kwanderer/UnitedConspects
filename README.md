@@ -12,6 +12,8 @@ We are going to create a database for students for the exchange of educational m
 
 *Valērija Radzeniece* - main tester, design developer
 
+................................................................................................................................................................................
+
 ### Requirements
 
 Python3 (we recomend up to 3.6)
