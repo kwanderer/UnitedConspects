@@ -51,7 +51,7 @@ Download folder UnitedConspectsBeta with ALL files.
     4. Write device's IP address where your server is started
     5. Save and run client.py file
     
-Aplication's functions
+   **Aplication's functions**
 
 ![](https://github.com/krisypon/UnitedConspects/blob/master/Images/Screenshoots/GUI.PNG?raw=true)
     
