@@ -46,7 +46,7 @@ class Window(Frame):
             T.insert(INSERT, f.read())
             
     def ShowText(self):
-        text = Label(self, text="Welcome to our program! Please, write the full file name(with .pdf)")
+        text = Label(self, text="Welcome to our program! Please, write the full file name(with .pdf). Downoaded file you will find in the client folder.")
         text.pack()
         return
 
