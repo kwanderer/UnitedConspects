@@ -35,7 +35,7 @@ Usually this libraries are included by default.
 You can download Python 3.7 [here](https://www.python.org/downloads/)
 
 ### Get started
-Download folder UnitedConspectsBeta.
+Download folder UnitedConspectsBeta with ALL files.
 
    Running server and client from one machine.
     
@@ -50,6 +50,15 @@ Download folder UnitedConspectsBeta.
     3. Open client.py with any file editor (we recomend IDLE, Brackets, Nano)
     4. Write device's IP address where your server is started
     5. Save and run client.py file
+    
+Aplication's functions
+
+![](https://github.com/krisypon/UnitedConspects/blob/master/Images/Screenshoots/GUI.PNG?raw=true)
+    
+    Get List  -  gives a list of existing files
+    Text Box  -  place to write filename 
+    Get File  -  downloading file to a folder where client.py is located, before presing write filename in text box
+    Exit  -  close program
 
 Our program has been tested on Linux and Windows only.
 
