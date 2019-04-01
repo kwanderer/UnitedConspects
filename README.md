@@ -51,7 +51,7 @@ Download folder UnitedConspectsBeta.
 
 Our program has been tested on Linux and Windows only.
 
-If you have any problems or suggestions write to us. Here is a link to [bug list form.](https://docs.google.com/spreadsheets/d/1FEiBkBkX3OFcchRnv_yOWqFQSkaAlGLDS4qN3EAqAtI/edit#gid=0)
+If you have any problems or suggestions write to us. Here is a link to [bug list form & questions.](https://docs.google.com/spreadsheets/d/1FEiBkBkX3OFcchRnv_yOWqFQSkaAlGLDS4qN3EAqAtI/edit#gid=0)
 
 Last version update 31.03.2019
 
