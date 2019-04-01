@@ -39,15 +39,17 @@ Download folder UnitedConspectsBeta.
 
    Running server and client from one machine.
     
-    1. First run server.py file
-    2. Run client.py file
+    1. Go to folder "UnitedConspectsBeta"
+    2. First run server.py file with is in folder Server
+    3. Run client.py file
     
    Running server and client from different machines.
     
-    1. Run server.py
-    2. Open client.py with any file editor (we recomend IDLE, Brackets, Nano)
-    3. Write device's IP address where your server is started
-    4. Save and run client.py file
+    1. Go to folder "UnitedConspectsBeta"
+    2. Run server.py with is in folder Server
+    3. Open client.py with any file editor (we recomend IDLE, Brackets, Nano)
+    4. Write device's IP address where your server is started
+    5. Save and run client.py file
 
 Our program has been tested on Linux and Windows only.
 
