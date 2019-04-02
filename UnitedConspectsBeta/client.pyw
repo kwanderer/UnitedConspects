@@ -62,7 +62,7 @@ class Window(Frame):
         return
         
     def Conect(self):
-        csFT.connect(('127.0.0.1', 10003))
+        csFT.connect(('127.0.0.1', 10005))
         return
     
     def GetFile(self):
