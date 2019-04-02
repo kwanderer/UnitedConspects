@@ -24,15 +24,15 @@ class Window(Frame):
         self.Conect()       
         #Exit Button
         quitButton = Button(self, text="Exit",command=self.ClientExit)
-        quitButton.place(x=250, y=100)
+        quitButton.place(x=260, y=120)
         #Input Message and Send It
         self.entry = Entry(self)
         self.button = Button(self, text="Get File", command=self.GetFile)
-        self.button.place(x=200, y=50)
-        self.entry.place(x=50, y=50) 
+        self.button.place(x=230, y=80)
+        self.entry.place(x=50, y=80) 
         #Get list of files
         listButton = Button(self, text="Get list", command=self.GetList)
-        listButton.place(x=0, y=100)
+        listButton.place(x=0, y=120)
        
     def Text(self):
         S = Scrollbar(self)
@@ -46,7 +46,11 @@ class Window(Frame):
             T.insert(INSERT, f.read())
             
     def ShowText(self):
-        text = Label(self, text="Welcome to our program! Please, write the full file name(with .pdf). Downoaded file you will find in the client folder.")
+        text = Label(self, text="Welcome to our program!")
+        text.pack()
+        text = Label(self, text="Please, write the full file name(with .pdf).")
+        text.pack()
+        text = Label(self, text="Downoaded file you will find in the folder where is client file.")
         text.pack()
         return
 
@@ -58,14 +62,15 @@ class Window(Frame):
         return
         
     def Conect(self):
-        csFT.connect(('127.0.0.1', 10005))
+        csFT.connect(('127.0.0.1', 10003))
         return
     
     def GetFile(self):
         message=self.entry.get()
         csFT.send(message.encode('ascii'))
         self.ReceiveFile()
-        return
+        pdf_file=message
+        #return
         
     def GetList(self):
         csFT.send(bytes(1))
@@ -82,6 +87,7 @@ class Window(Frame):
                     break
                 else:
                     fw.write(data)
+                return data    
             fw.close()
             #print("Received..")
             return 
@@ -98,6 +104,7 @@ class Window(Frame):
                     break
                 else:
                     fw.write(data)
+                return data
             fw.close()
             #print("Received..")
             if os.path.getsize(pdf_file) == 0:
@@ -106,6 +113,6 @@ class Window(Frame):
             
         
 root = Tk()
-root.geometry("300x300")
+root.geometry("400x300")
 app = Window(root)
 root.mainloop()
