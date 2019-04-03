@@ -71,15 +71,19 @@ class Window(Frame):
         return
         
     def Conect(self):
-        csFT.connect(('127.0.0.1', 10005))
+        csFT.connect(('127.0.0.1', 10003))
         return
     
     def GetFile(self):
         message=self.entry.get()
+        #print(message)
         csFT.send(message.encode('ascii'))
-        self.ReceiveFile()
-        pdf_file=message
-        #return
+        #print('Sended file name')
+        #self.ReceiveFile()
+        self.RFile()
+        #print('File received')
+        #pdf_file=message
+        return
         
     def GetList(self):
         csFT.send(bytes(1))
@@ -96,10 +100,27 @@ class Window(Frame):
                     break
                 else:
                     fw.write(data)
+                    #print(data)
                 return data    
             fw.close()
             #print("Received..")
-            return 
+            return
+    def RFile(self):
+        with open(pdf_file, "wb") as fw:
+            #print('Open file')
+            while True:
+                data = csFT.recv(1024)
+                fw.write(data)
+                #print('Save data')
+                if data == bytes(1):
+                    break
+            fw.close()
+            #print('File close')
+            #print("Received..")
+            if os.path.getsize(pdf_file) == 0 or os.path.getsize(pdf_file) == 1:
+                os.remove(pdf_file)
+            return
+            return
         
     def ReceiveFile(self):        
         with open(pdf_file, "wb") as fw:
@@ -113,7 +134,9 @@ class Window(Frame):
                     break
                 else:
                     fw.write(data)
-                return data
+                    #print(data)
+                #return data
+                #continue   
             fw.close()
             #print("Received..")
             if os.path.getsize(pdf_file) == 0:
