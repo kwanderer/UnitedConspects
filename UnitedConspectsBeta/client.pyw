@@ -120,7 +120,6 @@ class Window(Frame):
             if os.path.getsize(pdf_file) == 0 or os.path.getsize(pdf_file) == 1:
                 os.remove(pdf_file)
             return
-            return
         
     def ReceiveFile(self):        
         with open(pdf_file, "wb") as fw:
