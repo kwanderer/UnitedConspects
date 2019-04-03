@@ -35,15 +35,16 @@ class Window(Frame):
         listButton.place(x=0, y=120)
        
     def Text(self):
+        T = Text(self, height=9)
+        T.place(x=0, y=150)
+        with open('listreceived.txt', 'r') as f:
+            T.insert(INSERT, f.read())
         S = Scrollbar(self)
-        T = Text(self, height=10)
-        T.place(x=0, y=140)
         S.pack(side=RIGHT, fill=Y)
         #S.place(in_=txtOutput, relx=1.0, relheight=1.0, bordermode="outside")
         S.config(command=T.yview)
         T.config(yscrollcommand=S.set)
-        with open('listreceived.txt', 'r') as f:
-            T.insert(INSERT, f.read())
+        
             
     def ShowText(self):
         text = Label(self, text="Welcome to our program!")
@@ -51,6 +52,14 @@ class Window(Frame):
         text = Label(self, text="Please, write the full file name(with .pdf).")
         text.pack()
         text = Label(self, text="Downoaded file you will find in the folder where is client file.")
+        text.pack()
+        text = Label(self, text=" ")
+        text.pack()
+        text = Label(self, text=" ")
+        text.pack()
+        text = Label(self, text=" ")
+        text.pack()
+        text = Label(self, text=" ")
         text.pack()
         return
 
@@ -62,7 +71,7 @@ class Window(Frame):
         return
         
     def Conect(self):
-        csFT.connect(('127.0.0.1', 10005))
+        csFT.connect(('127.0.0.1', 10003))
         return
     
     def GetFile(self):
