@@ -58,13 +58,14 @@ Download folder UnitedConspectsBeta with ALL files.
     Get List  -  gives a list of existing files
     Text Box  -  place to write filename 
     Get File  -  downloading file to a folder where client.py is located, before presing write filename in text box
+                 If the file is big, it can take some time to download it. In Windows program can be "Not Responding" while downloading file
     Exit  -  close program
 
 Our program has been tested on Linux and Windows only.
 
 If you have any problems or suggestions write to us. Here is a link to [bug list form & questions.](https://docs.google.com/spreadsheets/d/1FEiBkBkX3OFcchRnv_yOWqFQSkaAlGLDS4qN3EAqAtI/edit#gid=0)
 
-Last version update 31.03.2019
+Last version update 03.04.2019. Reason: some bugs were fixed.
 
 ................................................................................................................................................................................
 
